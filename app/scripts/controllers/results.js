@@ -16,6 +16,7 @@ angular.module('myAmericaApp')
       $scope.lengthOfStay = args["answer2"];
       $scope.lat = args["lat"];
       $scope.lng = args["lng"];
+      $scope.interests = args["interests"];
       console.log(age + ',' + length);
       // do what you want to do
     });

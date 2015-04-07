@@ -19,6 +19,8 @@ angular
     'ngSanitize',
     'ngTouch'
   ])
+  .constant('RIDB_API_KEY', '718A093253714004B839308AE31E7AD8')
+  .constant('RIDB_API_URL', 'https://ridb.recreation.gov/api/v1')
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {

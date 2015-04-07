@@ -3,3 +3,10 @@ dist
 .tmp
 .sass-cache
 bower_components
+.vagrant
+Berksfile.lock
+.DS_Store
+.idea
+*.map
+.project
+bower.json

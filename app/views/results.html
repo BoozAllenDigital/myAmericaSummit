@@ -1,13 +1,26 @@
-Results page
-<br>
-<div ng-repeat="result in results.RECDATA">
-  {{result.RecAreaName}}
-  <br>
-  <div ng-bind-html="result.RecAreaDescription"></div>
-  <br><br>
+
+<div class="container">
+<div id="accordion" class="panel-group" ng-repeat="result in results.RECDATA">
+
+  <div class="panel panel-default" id="panel1">
+      <div class="panel-heading">
+           <h4 class="panel-title">
+      <a data-toggle="collapse" data-target="#{{result.RecAreaID}}">
+         {{result.RecAreaName}}
+      </a>
+    </h4>
+      </div>
+      <div id="{{result.RecAreaID}}" class="panel-collapse collapse">
+          <div class="panel-body" ng-bind-html="result.RecAreaDescription"></div>
+          <div class="row">
+            <div class="col-sm-6">
+              <button class="btn btn-success">Save</button>
+            </div>
+            <div class="coll-sm-6">
+              <button class="btn btn-alert">Details</button>
+            </div>
+          </div>
+      </div>
+  </div>
 </div>
-
-<div ng-repeat="activity in activities.RECDATA">
-  {{activity.ActivityID}}:{{activity.ActivityName}}
-
 </div>

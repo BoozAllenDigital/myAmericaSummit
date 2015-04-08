@@ -27,18 +27,6 @@ module.exports = function (grunt) {
     // Project settings
     yeoman: appConfig,
 
-    // background shell settings
-    bgShell: {
-      _defaults: {
-        bg: true
-      },
-      
-      serve: {
-        cmd: 'grunt serve',
-        bg: false
-      }
-    }
-
     // Watches files for changes and runs tasks based on the changed files
     watch: {
       bower: {
@@ -455,8 +443,6 @@ module.exports = function (grunt) {
     grunt.task.run(['serve:' + target]);
   });
 
-  grunt.registerTask('servebg', 'bgShell:serve');
-
   grunt.registerTask('test', [
     'clean:server',
     'wiredep',
@@ -488,5 +474,4 @@ module.exports = function (grunt) {
     'test',
     'build'
   ]);
-
 };

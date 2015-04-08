@@ -27,6 +27,15 @@ module.exports = function (grunt) {
     // Project settings
     yeoman: appConfig,
 
+    // forever settings
+    forever: {
+      server: {
+        options: {
+          index: 'app/scripts/app.js'
+        }        
+      }
+    },
+
     // Watches files for changes and runs tasks based on the changed files
     watch: {
       bower: {
@@ -474,4 +483,6 @@ module.exports = function (grunt) {
     'test',
     'build'
   ]);
+
+  grunt.loadNpmTasks('grunt-forever');
 };
